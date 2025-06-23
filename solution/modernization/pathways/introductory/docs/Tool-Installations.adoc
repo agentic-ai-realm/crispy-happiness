@@ -1,0 +1,24 @@
+= Tool Installations
+
+* No software package manager on your machine?
+-> Install either or
+- `chocoloatey` for Windows from https://chocolatey.org/install#individual
+- `brew` (Homebrew) for macOS or Linux form https://brew.sh/
+
+* *LM-Studio* already installed?
+-> Install either or
+
+- `choco install lm-studio`
+- `brew install lm-studio`
+- Alternative -> direct install: https://lmstudio.ai/
+
+* *UV* already installed?
+-> Install either or
+- `choco install uv`
+- `brew install uv`
+
+* *tree* already installed?
+-> Install either or
+- `choco install tree`
+- `brew install tree`
+

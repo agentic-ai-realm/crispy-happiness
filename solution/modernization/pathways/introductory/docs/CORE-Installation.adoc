@@ -1,0 +1,28 @@
+= CORE Installation
+
+- Click on the headline of this section, that opens the website to the repository
+
+- Click the green button "<> Code" and Click on "Download ZIP" to start download ZIP file
+
+- Create a directory `/myprojects/core-lib` or `c:\myprojects\core-lib`
+
+- Extract the content of the ZIP file to `/myprojects/core-lib` or `c:\myprojects\core-lib`
+
+- Change name of pyproject.toml to pyproject.toml_bak
+
+- Change name of poetry.lock to poetry.lock_bak
+
+- Download the pyproject.toml from github: and save it to `/myprojects/core-lib` or `c:\myprojects\core-lib`
+
+- Execute `uv venv .venv --python 3.12`
+
+- Execute `./.venv/script/activate` or `.\.venv\Scripts\activate`
+
+- Execute: `uv sync --active`
+
+- Execute: `uv lock`
+
+- Execute: `uv build`
+
+- Validate - dist directory is created with content one
+ `*.whl` and one `*tar.gz` file.
