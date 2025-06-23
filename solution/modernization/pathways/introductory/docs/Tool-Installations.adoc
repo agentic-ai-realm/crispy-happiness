@@ -2,7 +2,7 @@
 
 * No software package manager on your machine?
 -> Install either or
-- `chocoloatey` for Windows from https://chocolatey.org/install#individual
+- `chocolatey` for Windows from https://chocolatey.org/install#individual
 - `brew` (Homebrew) for macOS or Linux form https://brew.sh/
 
 * *LM-Studio* already installed?

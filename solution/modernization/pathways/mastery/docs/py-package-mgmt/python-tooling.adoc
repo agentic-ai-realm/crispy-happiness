@@ -80,5 +80,5 @@ https://docs.astral.sh/uv
 
 The evolution of Python packaging and environment management tools showcases a strong community focus on improving developer experience, efficiency, and reproducibility. From the foundational `pip` and virtual environments, we've seen the emergence of specialised tools like `pipx` for clean CLI application management and integrated solutions like `Poetry` that streamline project workflows with configuration files and lockfiles. Now, tools like `uv` push the boundaries of performance and aim for further unification. By leveraging these powerful tools, developers can significantly reduce time spent on setup and dependency wrangling, minimise conflicts, and ensure consistent environments. This allows you to *focus more on writing brilliant code* and less on managing the plumbing underneath.
 
-_--- *Solutioning Team @2025* - pathways Introductory / Advanced / Mastery_
+-- *_Solution Strategy Team @2025* => pathways: Introductory / Advanced / Mastery_
 

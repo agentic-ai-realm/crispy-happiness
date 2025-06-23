@@ -1,18 +1,18 @@
 = CORE Installation
 
-- Click on the headline of this section, that opens the website to the repository
+- Recap: In last section clicking the green button "<> Code", then select "Download ZIP" and the ZIP file download started.
 
-- Click the green button "<> Code" and Click on "Download ZIP" to start download ZIP file
-
-- Create a directory `/myprojects/core-lib` or `c:\myprojects\core-lib`
+- Now create a directory `/myprojects/core-lib` or `c:\myprojects\core-lib`
 
 - Extract the content of the ZIP file to `/myprojects/core-lib` or `c:\myprojects\core-lib`
 
-- Change name of pyproject.toml to pyproject.toml_bak
+- Change name of `pyproject.toml` to `pyproject.toml_bak`
 
-- Change name of poetry.lock to poetry.lock_bak
+- Change name of `poetry.lock` to `poetry.lock_bak`
 
-- Download the pyproject.toml from github: and save it to `/myprojects/core-lib` or `c:\myprojects\core-lib`
+- Execute: `touch pyproject.toml` or on windows powershell `New-item -Itemtype File pyproject.toml`
+
+- Copy the content from github file  `introductory/core/pyproject.toml`, open file `pyproject.toml` and paste the content, then save it (location: `/myprojects/core-lib/pyproject.toml` or `c:\myprojects\core-lib\pyproject.toml`)
 
 - Execute `uv venv .venv --python 3.12`
 

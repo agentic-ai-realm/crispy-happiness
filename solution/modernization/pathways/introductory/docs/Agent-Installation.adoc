@@ -6,13 +6,13 @@
 - Execute `uv init --name "sole-agent" --description "Sole-Agent" --no-pin-python --python ">=3.11,<3.13"`
 - Execute `uv venv .venv --python 3.12`
 - Execute `./.venv/script/activate` or `.\.venv\Scripts\activate`
-- Open IDE at root /myprojects/sole-agent
+- Open IDE at root `/myprojects/sole-agent`
 - Execute `uv sync --active`
 - Execute `uv lock`
 - Start LM-Studio.
-- Select "discover" with symbol magnifier lens and use Model Search, select a model from the list and download it (green button "Download" at bottom right)
+- Select "_discover_" with symbol magnifier lens and use Model Search. Select a model from the list and download it (green button "Download" at bottom right)
 - Download at least the LLM (`google/gemma-3-4b`) to local device.
 - At LM-Studio select green terminal sign to the left - the green developer logs are visible.
 - At IDE on project root `/myprojects/sole-agent` or `c:\myprojects\sole-agent` go to file `main.py` and start processing (`run main`) - Watch developer logs at LM-Studio.
-- Processing takes a bit of time - Enjoy result!
+- Processing takes a bit of time - *Enjoy result!*
 
