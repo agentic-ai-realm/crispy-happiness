@@ -1,5 +1,5 @@
 [project]
-name = "core-libs"
+name = "corelibs"
 version = "0.0.0"
 description ="library for setting up and perform complex tasks and collection of helpers."
 authors = [ {name = "Core Team International"} ]
