@@ -1,0 +1,123 @@
+= Guided Tour to CrewAI 'kickstartcrew'
+
+== Pre-Conditions
+- uv is installed
+- tree is installed
+- python@3.13 (python3 version 3.13) is installed
+- At least Ollama or LM-Studio is installed
+- An LLM is locally downloaded (*LM-Studio*: google/gemma-3-8b | *Ollama*: gemma:7b)
+
+== Workflow
+
+Create a project directory
+
+```
+mkdir -p myprojects/crewai-kickstart
+cd myprojects/crewai-kickstart
+```
+Setup a python virtual environment
+```
+uv venv .vset --python 3.13
+# macOS: source .vset/bin/activate  # windows: .\.vset\Skripts\activate
+```
+Prepare CrewAI to work
+```
+uv pip install crewai
+uv tool list
+```
+Shows something like:
+```
+crewai v0.134.0
+- crewai
+```
+Create now the project for the kickstart crew.
+```
+crewai create crew kickstartcrew
+```
+When asked to select an LLM provider
+
+- for Ollama -> Select `ollama` and for the model select `ollama3.1`
+- for LM-Studio -> Select `openai`, for the model select `o1-mini` and enter for the api key `asdf`
+
+When the project creation is finished execute:
+```
+tree      # -> prints the created kickstartcrew project structure
+```
+Now disable the virtual environment and delete it with
+```
+deactivate
+rm -R .vset
+cd kickstartcrew
+```
+
+---
+
+=== Only for Ollama!
+
+At directory `kickstartcrew` edit the content of `.env` and replace the model
+```
+MODEL=ollama/gemma:7b
+API_BASE=http://localhost:11434
+```
+End of Ollama only section.
+
+---
+
+=== Only for LM-Studio!
+At directory `kickstartcrew` edit the content of `.env` and replace all with
+```
+BASE_URL=http://127.0.0.1:1234/v1
+API_KEY=asdf
+MODEL=google/gemma-3-8b
+```
+
+Open file `src/kickstartcrew/crew.py` and add the lines at the top section:
+```
+from crewai.llm import LLM
+import os
+from dotenv import load_dotenv
+```
+
+At the class Kickstartcrew add behind agents and tasks like
+```
+        agents: List[BaseAgent]
+        tasks: List[Task]
+
+        def __init__(self):
+           # configure LLM for LM-Studio
+           self.llm = LLM(
+               model="openai/" + os.getenv("MODEL"),  # "google/gemma-3-8b"
+               base_url=os.getenv("BASE_URL"),  # "http://127.0.0.1:1234/v1"
+               api_key=os.getenv("API_KEY"),  # "asdf"
+               temperature=0.7
+           )
+```
+
+At the configuration for researcher and reporting_agent add a ',' to the last line and then add an llm configuration with `llm=self.llm` to the end of the block
+```
+    return Agent(
+        .. , # don´t forget to add a ',' here!
+        llm=self.llm
+    )
+```
+End of LM-Studio only section.
+
+---
+
+At directory `myprojects/crewai-kickstart/kickstartcrew` execute the commands
+```
+uv venv .venv --python 3.13
+# macOS: source .venv/bin/activate  # windows: .\.venv\Skripts\activate
+uv add "python-dotenv>=1.0.0"
+uv sync --active
+```
+
+Check the Ollama or LM-Studio server is prepared and the LLM (here google/gemma-3-8b) is listed at the directory of all local available models.
+
+Execute from terminal at `/myprojects/crewai-kickstart/kickstartcrew`
+```
+crewai install
+crewai run
+```
+
+Watch and enjoy the result!
