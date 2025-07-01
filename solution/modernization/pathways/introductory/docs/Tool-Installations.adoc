@@ -9,7 +9,7 @@
 -> Install either or
 
 - `choco install lm-studio`
-- `brew install lm-studio`
+- `brew install --cask lm-studio`
 - Alternative -> direct install: https://lmstudio.ai/
 
 * *UV* already installed?

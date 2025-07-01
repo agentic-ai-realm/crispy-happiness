@@ -16,7 +16,7 @@
 
 - Execute `uv venv .venv --python 3.12`
 
-- Execute `./.venv/script/activate` or `.\.venv\Scripts\activate`
+- Execute `source .venv/bin/activate` or `.\.venv\Scripts\activate`
 
 - Execute: `uv sync --active`
 
@@ -24,5 +24,5 @@
 
 - Execute: `uv build`
 
-- Validate - dist directory is created with content one
- `*.whl` and one `*tar.gz` file.
+- Validate - dist directory is created with content, one
+ `*.whl` file and one `*tar.gz` file.

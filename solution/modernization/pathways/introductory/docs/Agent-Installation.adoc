@@ -1,17 +1,17 @@
 = Agent Installation - SoleAgent
 
+- Start LM-Studio first.
+- Select "_discover_" (-> the symbol magnifier lens) and use Model Search. Select a model from the list and download it (green button "Download" at bottom right)
+- Download at least one LLM (`google/gemma-3-4b`) to local device.
+- At LM-Studio select green terminal sign to the left - the green developer logs are visible.
 - Move to directory `/myprojects` or `c:\myprojects`
 - Execute `git clone https://github.com/agentic-ai-realm/sole-agent.git`
 - Execute `cd sole-agent`
 - Execute `uv venv .venv --python 3.12`
-- Execute `./.venv/script/activate` or `.\.venv\Scripts\activate`
+- Execute `source .venv/script/activate` or `.\.venv\Scripts\activate`
 - Execute `uv sync --active`
 - Execute `uv lock`
-- Start LM-Studio.
-- Select "_discover_" with symbol magnifier lens and use Model Search. Select a model from the list and download it (green button "Download" at bottom right)
-- Download at least the LLM (`google/gemma-3-4b`) to local device.
-- At LM-Studio select green terminal sign to the left - the green developer logs are visible.
 - Open IDE at root `/myprojects/sole-agent`
 - At IDE on project root `/myprojects/sole-agent` or `c:\myprojects\sole-agent` go to file `main.py` and start processing (`run main`) - Watch developer logs at LM-Studio.
-- Processing takes a bit of time - *Enjoy result!*
+- Processing takes a bit of time (LM-Studio prepares llm)  - *Enjoy result!*
 
