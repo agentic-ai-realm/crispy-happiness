@@ -112,7 +112,7 @@ uv add "python-dotenv>=1.0.0"
 uv sync --active
 ```
 
-Check the Ollama or LM-Studio server is prepared and the LLM (here google/gemma-3-8b) is listed at the directory of all local available models.
+Check the Ollama or LM-Studio server is prepared and the LLM (here LM-Studio: google/gemma-3-8b | Ollama: ollama/gemma:7b) is listed at the directory of all local available models.
 
 Execute from terminal at `/myprojects/crewai-kickstart/kickstartcrew`
 ```
