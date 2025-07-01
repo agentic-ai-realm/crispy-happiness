@@ -5,7 +5,7 @@
 - tree is installed
 - python@3.13 (python3 version 3.13) is installed
 - At least Ollama or LM-Studio is installed
-- An LLM is locally downloaded (*LM-Studio*: google/gemma-3-8b | *Ollama*: gemma:7b)
+- An LLM is locally downloaded (*LM-Studio*: google/gemma-3-4b | *Ollama*: gemma:7b)
 
 == Workflow
 
@@ -68,7 +68,7 @@ At directory `kickstartcrew` edit the content of `.env` and replace all with
 ```
 BASE_URL=http://127.0.0.1:1234/v1
 API_KEY=asdf
-MODEL=google/gemma-3-8b
+MODEL=google/gemma-3-4b
 ```
 
 Open file `src/kickstartcrew/crew.py` and add the lines at the top section:
@@ -86,7 +86,7 @@ At the class Kickstartcrew add behind agents and tasks like
         def __init__(self):
            # configure LLM for LM-Studio
            self.llm = LLM(
-               model="openai/" + os.getenv("MODEL"),  # "google/gemma-3-8b"
+               model="openai/" + os.getenv("MODEL"),  # "google/gemma-3-4b"
                base_url=os.getenv("BASE_URL"),  # "http://127.0.0.1:1234/v1"
                api_key=os.getenv("API_KEY"),  # "asdf"
                temperature=0.7
@@ -112,7 +112,7 @@ uv add "python-dotenv>=1.0.0"
 uv sync --active
 ```
 
-Check the Ollama or LM-Studio server is prepared and the LLM (here LM-Studio: google/gemma-3-8b | Ollama: ollama/gemma:7b) is listed at the directory of all local available models.
+Check the Ollama or LM-Studio server is prepared and the LLM (here LM-Studio: google/gemma-3-4b | Ollama: ollama/gemma:7b) is listed at the directory of all local available models.
 
 Execute from terminal at `/myprojects/crewai-kickstart/kickstartcrew`
 ```
