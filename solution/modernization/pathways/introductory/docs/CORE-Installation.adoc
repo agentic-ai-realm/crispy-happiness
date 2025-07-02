@@ -14,6 +14,13 @@
 
 - Copy the content from github file  `introductory/core/pyproject.toml`, open file `pyproject.toml` and paste the content, then save it (location: `/myprojects/corelibs/pyproject.toml` or `c:\myprojects\corelibs\pyproject.toml`)
 
+- Patch `/helpers/common/file_utils.py` at line ~37:
+```
+37: - with open(file_path, "w") as file:
+37: + with open(file_path, "w", encoding='utf-8') as file:
+```
+
+
 - Execute `uv venv .venv --python 3.12`
 
 - Execute `source .venv/bin/activate` or `.\.venv\Scripts\activate`
